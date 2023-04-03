@@ -1,9 +1,9 @@
 {
-  "name": "wgsl-tour",
+  "name": "tour-of-wgsl",
   "version": "0.1.0",
   "description": "A simple tour of WGSL static site generator.",
   "main": "index.js",
-  "repository": "https://github.com/google/wgsl-tour",
+  "repository": "https://github.com/google/tour-of-wgsl",
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
