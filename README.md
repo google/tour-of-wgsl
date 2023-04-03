@@ -26,7 +26,9 @@ This is not an officially supported Google product.
 >    hugo_extended_0.111.3_linux-amd64.deb`
 
 In 'Tour of WGSL' source directory
+
 2. Install Node dependencies `npm ci`
+
 3. Run Hugo webserver `npm run serve`
 
 This should start a webserver on `localhost:1313` that you can visit
