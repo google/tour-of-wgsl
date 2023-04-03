@@ -50,11 +50,11 @@
     </article>
 
     <div id='tour-wrapper'>
-      <wgsl-tour id='tour'><div id='tour-content' style='visibility: hidden'>
+      <wgsl-tour id='tour'><pre id='tour-content' style='visibility: hidden'>
         {{- if .Params.Shader -}}
         {{ os.ReadFile (partial "rel-path" (slice .Params.Shader .File.Dir)) -}}
         {{- end -}}
-      </div></wgsl-tour>
+      </pre></wgsl-tour>
     </div>
   </main>
 
