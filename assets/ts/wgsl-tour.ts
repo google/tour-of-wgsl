@@ -133,6 +133,9 @@ export class WGSLTour extends HTMLElement {
   async setVisualizationBuilder(val: VisualizerBuilder) {
     this.visualizationBuilder = val;
     try {
+      if (!navigator.gpu) {
+        throw new VisualizerError('WebGPU is not supported in this browser');
+      }
       await this.visualizationBuilder.configure(this.output);
     } catch (e) {
       this.onPipelineFailure({ message: e } as VisualizerError);
