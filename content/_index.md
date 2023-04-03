@@ -14,10 +14,16 @@ programming.
 
 The tour provides the WGSL shaders for each example. The shaders can be
 edited in the text view on the right, and the resulting output is displayed
-below the editor. The examples should run automatically when edited, and
-compilation errors will be displayed in the editor pane. Compilation errors
-will also appear in the JavaScript console, so it may be handy to keep
-that open too.
+below the editor.
+
+The editor provides:
+* Automatic execution of the entered shader.
+* Inline error messages for shader compilation errors.
+  Note, errors also appear in the developer console, so it maybe handle
+  to also keep that open.
+* Pressing `ctrl-o` when the cursor is on an attribute (e.g. `@builtin`)
+  a builtin value (e.g. `vertex_index`) or many of the builtin functions
+  (e.g. `sin`) to show documentation on selected element.
 
 Each of these shaders can serve as the starting point for your own
 exploration.
