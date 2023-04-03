@@ -147,6 +147,10 @@ header {
   a {
     color: var(--main-colour);
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   ul {
