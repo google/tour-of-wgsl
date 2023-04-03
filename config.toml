@@ -1,6 +1,6 @@
-baseURL = 'https://wgsl-tour.github.io'
+baseURL = 'https://google.github.io/tour-of-wgsl'
 languageCode = 'en-us'
-title = 'WGSL Tour'
+title = 'Tour of WGSL'
 disableKinds = ['sitemap', 'RSS']
 
 markup.highlight.noClasses = false
