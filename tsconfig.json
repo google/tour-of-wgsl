@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "resources/js",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2020",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noEmit": true,
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "typeRoots": [
+      "./node_modules/@webgpu/types",
+      "./node_modules/@types"
+    ]
+  },
+  "include": [
+    "prettier.config.toml",
+    "assets/ts/**/*.ts",
+    "assets/third_party/codemirror/wgsl-mode.js"
+  ],
+  "typedocOptions": {
+    "treatWarningsAsErrors": true,
+    "treatValidationWarningsAsErrors": true,
+    "entryPointStrategy": "expand",
+    "entryPoints": [
+      "assets/ts/",
+      "content/"
+    ],
+    "excludeInternal": false,
+    "excludeProtected": true,
+    "excludePrivate": true,
+    "excludeNotDocumentedKinds": [],
+    "out": "docs/",
+    "requiredToBeDocumented": [
+      "Enum",
+      "EnumMember",
+      "Variable",
+      "Function",
+      "Class",
+      "Interface",
+      "Property",
+      "Method",
+      "GetSignature",
+      "SetSignature",
+      "TypeAlias",
+      "Module",
+      "Namespace",
+      "Project",
+      "Constructor",
+      "Parameter"
+    ],
+    "validation": {
+      "notExported": true,
+      "invalidLink": true,
+      "notDocumented": true
+    }
+  }
+}

@@ -1,0 +1,9 @@
+baseURL = 'https://wgsl-tour.github.io'
+languageCode = 'en-us'
+title = 'WGSL Tour'
+disableKinds = ['sitemap', 'RSS']
+
+markup.highlight.noClasses = false
+markup.highlight.linenos = true
+
+markup.goldmark.renderer.unsafe = true

@@ -1,0 +1,24 @@
+{{/*
+* Copyright 2023 The Tour of WGSL Authors
+*
+* Use of this source code is governed by a BSD-style
+* license that can be found in the LICENSE file or at
+* https://developers.google.com/open-source/licenses/bsd
+
+******************************************************************
+
+Helper for returning a relative path if the path starts with './'
+
+Usage:
+
+partial 'rel-path' (slice [path] [current-path])
+
+*******************************************************************/ -}}
+{{- $path := index . 0 -}}
+{{- $cwd := index . 1 -}}
+
+{{- if strings.HasPrefix $path "./" -}}
+{{$cwd}}{{strings.TrimPrefix "./" $path}}
+{{- else -}}
+{{$path}}
+{{- end -}}

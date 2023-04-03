@@ -1,0 +1,21 @@
+{{/*
+* Copyright 2023 The Tour of WGSL Authors
+*
+* Use of this source code is governed by a BSD-style
+* license that can be found in the LICENSE file or at
+* https://developers.google.com/open-source/licenses/bsd
+*/ -}}
+
+<header>
+  <h1><a href="{{ .Site.BaseURL }}">WGSL Tour</a></h1>
+
+  <nav aria-label='Sections' class="nav_sections">
+    <ul>
+      {{ $page := . }}
+      {{ range sort .Site.Sections "File.Path" }}
+      {{$selected := or ($page.InSection .) ($page.IsDescendant .) }}
+      <li><a href="{{ .Permalink }}" {{if $selected}}class="selected" {{end}}>{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

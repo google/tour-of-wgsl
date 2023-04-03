@@ -1,0 +1,24 @@
+{
+  "name": "wgsl-tour",
+  "version": "0.1.0",
+  "description": "A simple tour of WGSL static site generator.",
+  "main": "index.js",
+  "repository": "https://github.com/google/wgsl-tour",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "serve": "hugo serve",
+    "docs": "typedoc"
+  },
+  "devDependencies": {
+    "@types/codemirror": "^5.60.7",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@webgpu/types": "^0.1.30",
+    "codemirror": "^5.65.12",
+    "eslint": "^8.36.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.8.6",
+    "typedoc": "^0.23.28",
+    "typescript": "^5.0.2"
+  }
+}

@@ -1,0 +1,73 @@
+{{/*
+* Copyright 2023 The Tour of WGSL Authors
+*
+* Use of this source code is governed by a BSD-style
+* license that can be found in the LICENSE file or at
+* https://developers.google.com/open-source/licenses/bsd
+*/ -}}
+
+<template id="wgsl-tour-tmpl">
+
+  {{- with resources.Get "third_party/codemirror/codemirror.css" -}}
+  <style>
+    {{ .Content | safeCSS }}
+  </style>
+  {{- end -}}
+
+  <style>
+    :host {
+      display: block;
+    }
+
+    canvas,
+    #wgsl-tour-output-canvas,
+    #wgsl-tour-output-text {
+      width: 640px;
+      height: 480px;
+      margin-top: 10px;
+    }
+
+    #canvas {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .CodeMirror {
+      border: 1px solid var(--shadow-colour);
+      height: 350px;
+    }
+
+    .CodeMirror .wgsl-compile,
+    .CodeMirror .wgsl-tooltip {
+      border-radius: 5px;
+      margin: 0;
+      margin-left: 2px;
+      padding: 4px;
+      border: 1px solid var(--shadow-highlight-colour);
+      overflow: auto;
+    }
+
+    .CodeMirror .wgsl-error {
+      background-color: var(--wgsl-error-background-colour);
+      color: var(--wgsl-error-colour);
+      font-weight: 800;
+    }
+
+    .CodeMirror .wgsl-info,
+    .CodeMirror .wgsl-tooltip {
+      background-color: var(--wgsl-info-background-colour);
+      color: var(--wgsl-info-colour);
+    }
+
+    .CodeMirror .wgsl-inline-error {
+      background-color: var(--wgsl-error-background-colour);
+      color: var(--wgsl-error-colour);
+      font-weight: 800;
+    }
+
+  </style>
+
+  <textarea id='wgsl-shader' spellcheck=false rows=25 cols=80></textarea>
+  <div id='output'></div>
+</template>

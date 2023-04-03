@@ -1,0 +1,87 @@
+{{/*
+* Copyright 2023 The Tour of WGSL Authors
+*
+* Use of this source code is governed by a BSD-style
+* license that can be found in the LICENSE file or at
+* https://developers.google.com/open-source/licenses/bsd
+*/ -}}
+
+<!doctype html>
+<html lang='en'>
+{{- partial "head.html" . -}}
+
+<body>
+  {{- partial "header.html" . -}}
+  <nav aria-label='Breadcrumbs' class="nav_breadcrumbs">
+    <ul>
+      {{ range .Ancestors.Reverse }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    </ul>
+  </nav>
+
+  <main id='container'>
+    <article id='content'>
+      <main>
+        {{- block "main" . -}}{{- end -}}
+      </main>
+
+      <nav class='directional'>
+        {{ $sorted_pages := sort (where .Site.Pages "Kind" "!=" "taxonomy") "File.Path" }}
+        {{ $prev := $sorted_pages.Next . }}{{/* prev-next is intentional */}}
+        {{- if $prev -}}
+        <a class='prev' href="{{ $prev.Permalink }}">
+          <div class='title'>&lt; {{ $prev.Title }}</div>
+        </a>
+        {{- else -}}
+        <!-- first page has no previous button, so put in a fake element -->
+        <div class='prev'></div>
+        {{- end -}}
+
+        {{ $next := $sorted_pages.Prev . }}{{/* prev-next is intentional */}}
+        {{- if $next -}}
+        <a class='next' href="{{ $next.Permalink }}">
+          <div class='title'>{{ $next.Title }} &gt;</div>
+        </a>
+        {{- end -}}
+      </nav>
+    </article>
+
+    <div id='tour-wrapper'>
+      <wgsl-tour id='tour'><div id='tour-content' style='visibility: hidden'>
+        {{- if .Params.Shader -}}
+        {{ os.ReadFile (partial "rel-path" (slice .Params.Shader .File.Dir)) -}}
+        {{- end -}}
+      </div></wgsl-tour>
+    </div>
+  </main>
+
+
+  {{- partial "footer.html" . -}}
+
+  {{ $js := resources.Get "ts/app.ts" | js.Build | resources.Fingerprint }}
+  <script src='{{ $js.RelPermalink }}' type='module'></script>
+
+
+  {{- $bootstrap := ""}}
+  {{- if .Params.Bootstrap}}
+  {{- $bootstrap = os.ReadFile (partial "rel-path" (slice .Params.Bootstrap .File.Dir))}}
+  {{- end }}
+
+  {{- $viz_path := "/ts/noop_visualizer.ts" }}
+  {{- if .Params.Visualizer }}
+  {{- $viz_path = .Params.Visualizer}}
+  {{- end }}
+
+  {{ $viz_builder := resources.Get $viz_path | js.Build (dict "format" "esm") }}
+  <script type='module'>
+    import VisualizationBuilder from {{ $viz_builder.RelPermalink }};
+    let tour = document.getElementById('tour');
+    tour.setBootstrap({{ $bootstrap }});
+    tour.setVisualizationBuilder(new VisualizationBuilder({{.Params.VisualizerOptions }}));
+  </script>
+</body>
+
+</html>

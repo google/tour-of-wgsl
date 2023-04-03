@@ -1,0 +1,8 @@
+{{- $str := .Get 0 -}}
+{{- $str = strings.Replace $str "\u003c" "&lt;" -}}
+{{- $str = strings.Replace $str "\u003e" "&gt;" -}}
+{{- $str = strings.Replace $str "(C)" "<span class='template template-mat-c'>C</span>" -}}
+{{- $str = strings.Replace $str "(R)" "<span class='template template-mat-r'>R</span>" -}}
+{{- $str = strings.Replace $str "(T)" "<span class='template template-mat-t'>T</span>" -}}
+
+<span class='code'>{{.Page.RenderString $str}}</span>

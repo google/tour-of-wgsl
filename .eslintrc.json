@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "env": {
+    "browser": true
+  },
+  "plugins": [
+      "import"
+  ],
+  "rules": {
+    "linebreak-style": ["warn", "unix"],
+    "no-console": "warn",
+    "no-undef": "off",
+    "no-useless-rename": "warn",
+    "object-shorthand": "warn",
+    "quotes": ["warn", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+
+    "import/newline-after-import": ["warn", { "count": 1 }],
+    "import/no-duplicates": "warn"
+  }
+}
