@@ -1,9 +1,6 @@
 ---
 title: "Control Flow"
 url: control-flow
-
-shader: ./index.wgsl
-visualizer: /ts/graphics_visualizer.ts
 ---
 
 * [If](/control-flow/if-statements)
