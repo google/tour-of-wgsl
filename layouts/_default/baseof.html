@@ -33,7 +33,7 @@
         {{ $prev := $sorted_pages.Next . }}{{/* prev-next is intentional */}}
         {{- if $prev -}}
         <a class='prev' href="{{ $prev.Permalink }}">
-          <div class='title'>&lt; {{ $prev.Title }}</div>
+          <div class='title'>&larr; {{ $prev.Title }}</div>
         </a>
         {{- else -}}
         <!-- first page has no previous button, so put in a fake element -->
@@ -43,7 +43,7 @@
         {{ $next := $sorted_pages.Prev . }}{{/* prev-next is intentional */}}
         {{- if $next -}}
         <a class='next' href="{{ $next.Permalink }}">
-          <div class='title'>{{ $next.Title }} &gt;</div>
+          <div class='title'>{{ $next.Title }} &rarr;</div>
         </a>
         {{- end -}}
       </nav>
