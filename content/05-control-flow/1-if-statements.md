@@ -20,9 +20,11 @@ required around the body.
 <details class='example'>
 <summary>Example</summary>
 
-<pre><code>if a {
+```
+if a {
 } else if (b) {
-}</code></pre>
+}
+```
 
 </details>
 
@@ -32,11 +34,13 @@ single optional `else` block.
 <details class='example'>
 <summary>Example</summary>
 
-<pre><code>if a {
+```
+if a {
 } else if b {
 } else if c {
 } else {
-}</code></pre>
+}
+```
 
 </details>
 
