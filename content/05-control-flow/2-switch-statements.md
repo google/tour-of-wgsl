@@ -16,7 +16,7 @@ A switch has a condition, the condition must be a [concrete integer
 scalar]({{< ref "/02-types/01-basic-scalars" >}}) type. The `case`
 selectors must have the same type as the condition.
 
-Like the `if` statement the parenthesis around the condition are
+Like with `if`, the parentheses around the condition are
 optional.
 
 A switch can have zero or more `case` blocks.
@@ -24,7 +24,7 @@ A switch can have zero or more `case` blocks.
 A `default` block is required. Multiple `default` blocks are not
 permitted
 
-`case` and `default` blocks require brackets.
+`case` and `default` blocks require braces.
 
 There is no `fallthrough` in WGSL, but cases can have multiple
 selectors. `default` may be included in the multi-selector list.
