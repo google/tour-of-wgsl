@@ -218,10 +218,30 @@ header {
 }
 
 footer {
-  margin-top: 10px;
+  font-size: .8em;
+  margin: auto 10px;
   padding: 10px;
   text-align: center;
   border-top: 1px solid var(--shadow-colour);
+
+  main {
+    display: flex;
+    flex-direction: row;
+
+    div {
+      flex-grow: 1;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    text-align: left;
+  }
 }
 
 .matrix-goat {
