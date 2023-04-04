@@ -1,0 +1,5 @@
+{{ if .Page.Store.Get "hasMermaid" }}
+  <script type="module">
+    Mermaid.initialize({ startOnLoad: true });
+  </script>
+{{ end }}
