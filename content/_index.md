@@ -19,8 +19,8 @@ below the editor.
 The editor provides:
 * Automatic execution of the entered shader.
 * Inline error messages for shader compilation errors.
-  Note, errors also appear in the developer console, so it maybe handle
-  to also keep that open.
+  Errors also appear in the developer console, so it may be handy
+  to keep that open too.
 * Pressing `ctrl-o` when the cursor is on an attribute (e.g. `@builtin`)
   a builtin value (e.g. `vertex_index`) or many of the builtin functions
   (e.g. `sin`) to show documentation on selected element.
