@@ -1,8 +1,4 @@
-struct Uniforms {
-  frame: u32,
-}
-@binding(0) @group(0) var<uniform> uniforms : Uniforms;
-
+@binding(0) @group(0) var<uniform> frame : u32;
 @vertex
 fn vtx_main(@builtin(vertex_index) vertex_index : u32) -> @builtin(position) vec4f {
   const pos = array(
@@ -16,5 +12,5 @@ fn vtx_main(@builtin(vertex_index) vertex_index : u32) -> @builtin(position) vec
 
 @fragment
 fn frag_main() -> @location(0) vec4f {
-  return vec4(1, sin(f32(uniforms.frame) / 128), 0, 1);
+  return vec4(1, sin(f32(frame) / 128), 0, 1);
 }
