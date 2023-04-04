@@ -13,7 +13,7 @@ of the syntax and features of WGSL, but assumes a familiarity with
 programming.
 
 The tour provides the WGSL shaders for each example. The shaders can be
-edited in the text view on the right, and the resulting output is displayed
+edited in the text view on the right (or below), and the resulting output is displayed
 below the editor.
 
 The editor provides:
@@ -28,8 +28,9 @@ The editor provides:
 Each of these shaders can serve as the starting point for your own
 exploration.
 
-> As a warmup, edit the `frag_main` function on the right. Change its return
-> value from `vec4(1, 0, 0, 1)` to `vec4(0, 1, 0, 1)`. What happens?
+> As a warmup, edit the `frag_main` function. Change the first component of its
+> return value from 1 to 0, so it's `vec4(0, sin(f32(frame) / 128), 0, 1)`.
+> What happens?
 
 The tour is organized into sections:
 
