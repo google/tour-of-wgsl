@@ -1,11 +1,7 @@
 fn for_loop() -> u32 {
   var counter = 0u;
-  for (var i = 0; i < 10; i++) {
-    counter += 1;
-  }
-
   // Parenthesis are required.
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 10; i++) {
     counter += 1;
   }
 
