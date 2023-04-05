@@ -25,9 +25,9 @@ A `var<private>` with no initializer will be automatically initialized with
 the zero value for the variable's type.
 
 The initializer for `var<private>` must be a
-[constant]({{< ref "/03-expressions/01-evaluation-stage/01-constant" >}}) expression.
+[constant]({{< ref "/expressions/evaluation-stage/constant" >}}) expression.
 
 Each shader invocation will have a unique instance of a `var` in private address-space.
 
 Uses of a `var<private>` will always result in a
-[runtime]({{< ref "/03-expressions/01-evaluation-stage/03-runtime" >}}) expression.
+[runtime]({{< ref "/expressions/evaluation-stage/runtime" >}}) expression.

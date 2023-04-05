@@ -12,10 +12,10 @@
   <nav aria-label='Sections' class="nav_sections">
     <ul>
       {{ $page := . }}
-      {{ range sort .Site.Sections "File.Path" }}
+      {{- range (partial "sort-pages" .Site.Sections) }}
       {{$selected := or ($page.InSection .) ($page.IsDescendant .) }}
       <li><a href="{{ .Permalink }}" {{if $selected}}class="selected" {{end}}>{{ .Title }}</a></li>
-      {{ end }}
+      {{- end }}
     </ul>
   </nav>
 </header>

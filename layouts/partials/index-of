@@ -1,0 +1,26 @@
+{{/*
+* Copyright 2023 The Tour of WGSL Authors
+*
+* Use of this source code is governed by a BSD-style
+* license that can be found in the LICENSE file or at
+* https://developers.google.com/open-source/licenses/bsd
+
+******************************************************************
+
+Helper to return the index of an item in a list, or -1 if the item was not found
+
+Usage:
+
+partial 'index-of' (slice $list $item)
+
+*******************************************************************/ -}}
+{{- $list    := index . 0 -}}
+{{- $element := index . 1 -}}
+
+{{- $index := -1 }}
+{{- range $i, $e := $list }}
+{{- if eq . $element}}
+{{- $index = $i }}
+{{- end}}
+{{- end}}
+{{return $index}}

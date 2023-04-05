@@ -13,7 +13,7 @@ Similar to `if` statements, a `switch` statement can be used to branch
 over multiple blocks.
 
 A switch has a condition, the condition must be a [concrete integer
-scalar]({{< ref "/02-types/01-basic-scalars" >}}) type. The `case`
+scalar]({{< ref "/types/basic-scalars" >}}) type. The `case`
 selectors must have the same type as the condition.
 
 Like with `if`, the parentheses around the condition are
