@@ -31,11 +31,11 @@ In 'Tour of WGSL' source directory
 
 3. Run Hugo webserver `npm run serve`
 
-This should start a webserver on `localhost:1313` that you can visit
-using a browser on your local machine.  Editing pages in the site will
-auto-reload the browser window. This site may not display correctly if
-WebGPU is not available in your browser, see below for details about
-enabling WebGPU.
+This should start a webserver on `localhost:1313/tour-of-wgsl` that you
+can visit using a browser on your local machine.  Editing pages in the
+site will auto-reload the browser window. This site may not display
+correctly if WebGPU is not available in your browser, see below for
+details about enabling WebGPU.
 
 Documentation can be generated with `npm run docs`, though there are
 known issues with types that may cause warnings/errors.
