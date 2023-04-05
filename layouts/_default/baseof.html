@@ -29,9 +29,10 @@
       </main>
 
       <nav class='directional'>
-        {{ $sorted_pages := sort (where .Site.Pages "Kind" "!=" "taxonomy") "File.Path" }}
-        {{ $prev := $sorted_pages.Next . }}{{/* prev-next is intentional */}}
-        {{- if $prev -}}
+        {{- $all_pages := partial "all-pages" }}
+        {{- $page_index := partial "index-of" (slice $all_pages .) }}
+        {{- if gt $page_index 0 }}
+        {{- $prev := index $all_pages (sub $page_index 1) }}
         <a class='prev' href="{{ $prev.Permalink }}">
           <div class='title'>&larr; {{ $prev.Title }}</div>
         </a>
@@ -40,8 +41,8 @@
         <div class='prev'></div>
         {{- end -}}
 
-        {{ $next := $sorted_pages.Prev . }}{{/* prev-next is intentional */}}
-        {{- if $next -}}
+        {{- if lt $page_index (sub (len $all_pages) 1) }}
+        {{- $next := index $all_pages (add $page_index 1) }}
         <a class='next' href="{{ $next.Permalink }}">
           <div class='title'>{{ $next.Title }} &rarr;</div>
         </a>

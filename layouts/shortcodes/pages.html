@@ -7,7 +7,7 @@
 */ -}}
 
 <ul>
-    {{ range (sort .Page.Pages "File.Path") }}
+    {{ range (partial "sort-pages" .Page.Pages) }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
 </ul>

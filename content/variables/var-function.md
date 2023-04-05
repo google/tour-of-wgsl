@@ -23,7 +23,7 @@ A `var<function>` with no initializer will be automatically initialized with
 the zero value for the variable's type.
 
 There are no restrictions for the
-[evaluation stage]({{< ref "/03-expressions/01-evaluation-stage" >}})
+[evaluation stage]({{< ref "/expressions/evaluation-stage" >}})
 of the initializer of a `var<function>`.
 
 A `var` declared within a function has the default address-space of `function`,
@@ -36,4 +36,4 @@ var this_is_more_common : i32;
 Each shader invocation will have a unique instance of a `var` in function address-space.
 
 Uses of a `var<function>` will always result in a
-[runtime]({{< ref "/03-expressions/01-evaluation-stage/03-runtime" >}}) expression.
+[runtime]({{< ref "/expressions/evaluation-stage/runtime" >}}) expression.

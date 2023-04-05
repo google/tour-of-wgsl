@@ -18,14 +18,14 @@ Abstract-numerics have some special properties:
 * **Abstract-numeric types can't be spelled in WGSL source code**
 
   You cannot explicitly *name* an abstract-numeric type, but they exist as the type
-  of unsuffixed [numeric literals]({{< ref "/03-expressions/01-evaluation-stage/01-constant/01-numeric-literals" >}}),
+  of unsuffixed [numeric literals]({{< ref "/expressions/evaluation-stage/constant/numeric-literals" >}}),
   and some constant-expressions.
 
 * **Only constant-expressions can be of abstract-numeric type**
 
   Abstract-numeric values must first be converted to a concrete (non-abstract) type
-  for use as an [override-expression]({{< ref "/03-expressions/01-evaluation-stage/02-override" >}})
-  or as a [runtime-expression]({{< ref "/03-expressions/01-evaluation-stage/03-runtime" >}}).
+  for use as an [override-expression]({{< ref "/expressions/evaluation-stage/override" >}})
+  or as a [runtime-expression]({{< ref "/expressions/evaluation-stage/runtime" >}}).
 
 * **Abstract-numeric expressions must be finite**
 

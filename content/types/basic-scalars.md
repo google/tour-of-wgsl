@@ -10,4 +10,4 @@ The fundamental WGSL types are:
 * `f32` - an IEEE-754 binary32, floating point.
 * `bool` - a `true` or `false` value, with no specified storage representation.
 
-These types are known as concrete scalar types, and can be used in [all evaluation stages]({{< ref "/03-expressions" >}}).
+These types are known as concrete scalar types, and can be used in [all evaluation stages]({{< ref "/expressions" >}}).

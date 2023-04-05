@@ -1,0 +1,21 @@
+{{/*
+* Copyright 2023 The Tour of WGSL Authors
+*
+* Use of this source code is governed by a BSD-style
+* license that can be found in the LICENSE file or at
+* https://developers.google.com/open-source/licenses/bsd
+
+******************************************************************
+
+Helper for all the pages sorted by the order declared in data/PageOrder.json
+
+Usage:
+
+partial 'all-pages'
+
+*******************************************************************/ -}}
+{{ define "partials/page_by_name" }}
+{{ return (site).GetPage . }}
+{{ end }}
+
+{{return apply (site).Data.PageOrder "partial" "page_by_name" "."}}
