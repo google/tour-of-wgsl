@@ -7,7 +7,7 @@
 
 ******************************************************************
 
-Helper for return the index of an item in a list, or -1 if the item was not found
+Helper to return the index of an item in a list, or -1 if the item was not found
 
 Usage:
 
