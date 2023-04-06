@@ -1,7 +1,7 @@
 struct Vehicle {
   num_wheels: u32,
   mass_kg: f32, // The last comma is optional
-}
+}  // Semicolon is optional
 
 // Constructing a structure value by providing values for all members.
 const a_bicycle = Vehicle(2, 10.5);
