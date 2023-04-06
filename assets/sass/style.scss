@@ -195,8 +195,9 @@ header {
 
 .footer_links {
   display: flex;
-  flex-direction: row;
-  justify-content: right;
+  flex-direction: column;
+  justify-content: center;
+
   li {
     margin-left: 10px;
     a {
@@ -204,8 +205,20 @@ header {
       img {
         align-self: center;
         margin-right: 2px;
+        width: 16px;
+        height: 16px;
+
+        &.small-icon {
+          width: 12px;
+          height: 12px;
+        }
       }
     }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer_links {
+    flex-direction: row;
   }
 }
 
