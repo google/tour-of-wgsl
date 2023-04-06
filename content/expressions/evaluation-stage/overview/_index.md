@@ -27,7 +27,7 @@ Each phase finalizes the value for expressions in a certain category, as follows
 
 ### Pipeline creation
 * Finalizes values for `override-expressions`
-* Sub-expressions can anything in a `const-expression`, plus
+* Sub-expressions can be anything in a `const-expression`, plus
   * override-declared values,
   * values from [GPUProgrammableStage.constants](https://gpuweb.github.io/gpuweb/#dom-gpuprogrammablestage-constants)
 
