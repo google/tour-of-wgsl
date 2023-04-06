@@ -11,9 +11,9 @@ a builtin value (e.g. <code>vertex_index</code>) or many of the builtin function
 exploration.</p><blockquote><p>As a warmup, edit the <code>frag_main</code> function. Change the first component of its
 return value from 1 to 0, so it&rsquo;s <code>vec4(0, sin(f32(frame) / 128), 0, 1)</code>.
 What happens?</p></blockquote><p>The tour is organized into sections:</p><ul><li><a href=https://google.github.io/tour-of-wgsl/functions/>Functions</a></li><li><a href=https://google.github.io/tour-of-wgsl/types/>Types</a></li><li><a href=https://google.github.io/tour-of-wgsl/expressions/>Expressions</a></li><li><a href=https://google.github.io/tour-of-wgsl/variables/>Variables and declared values</a></li><li><a href=https://google.github.io/tour-of-wgsl/control-flow/>Control Flow</a></li><li><a href=https://google.github.io/tour-of-wgsl/binding-points/>Binding Points</a></li><li><a href=https://google.github.io/tour-of-wgsl/uniformity-analysis/>Uniformity Analysis</a></li></ul><p>Each section has several sub-pages, and you can navigate forward
-and backward using the buttons on the bottom of each page.
-You can quickly get back to a higher level page using the breadcrumb
-links at the top of this pane.</p></main><nav class=directional><div class=prev></div><a class=next href=https://google.github.io/tour-of-wgsl/functions/><div class=title>Functions &rarr;</div></a></nav></article><div id=tour-wrapper><wgsl-tour id=tour><pre id=tour-content style=visibility:hidden>@binding(0) @group(0) var&lt;uniform&gt; frame : u32;
+and backward using the buttons on the bottom of each page, or by using the
+left and right keys on your keyboard.</p><p>You can quickly get back to a higher level page using the breadcrumb
+links at the top of this pane.</p></main><nav class=directional><div class=prev></div><a class=next href=https://google.github.io/tour-of-wgsl/functions/><div class=title>Functions &rarr;</div></a><script>document.addEventListener("keydown",e=>{if(e.target===document.body)switch(e.key){case"ArrowRight":e.stopPropagation(),window.location.href="https://google.github.io/tour-of-wgsl/functions/";break}})</script></nav></article><div id=tour-wrapper><wgsl-tour id=tour><pre id=tour-content style=visibility:hidden>@binding(0) @group(0) var&lt;uniform&gt; frame : u32;
 @vertex
 fn vtx_main(@builtin(vertex_index) vertex_index : u32) -&gt; @builtin(position) vec4f {
   const pos = array(
@@ -29,7 +29,7 @@ fn vtx_main(@builtin(vertex_index) vertex_index : u32) -&gt; @builtin(position) 
 fn frag_main() -&gt; @location(0) vec4f {
   return vec4(1, sin(f32(frame) / 128), 0, 1);
 }
-</pre></wgsl-tour></div></main><footer><main><div>&copy; 2023 Tour or WGSL</div><div><ul><li><a href=https://github.com/google/tour-of-wgsl>GitHub</a></li><li><a href=https://github.com/google/tour-of-wgsl/issues/new>File an Issue</a></li><li><a href=https://www.w3.org/TR/WGSL/>WGSL Spec</a></li><li><a href=https://www.w3.org/TR/webgpu/>WebGPU Spec</a></li></ul></div></main></footer><script src=/tour-of-wgsl/ts/app.804f3a47ca51e05c9a24d1a0563071e519afcd209df42bfd0def4925a761a673.js type=module></script>
+</pre></wgsl-tour></div></main><footer><main><div>&copy; 2023 Tour or WGSL</div><div><ul><li><a href=https://github.com/google/tour-of-wgsl>GitHub</a></li><li><a href=https://github.com/google/tour-of-wgsl/issues/new>File an Issue</a></li><li><a href=https://www.w3.org/TR/WGSL/>WGSL Spec</a></li><li><a href=https://www.w3.org/TR/webgpu/>WebGPU Spec</a></li></ul></div></main></footer><script src=/tour-of-wgsl/ts/app.46a75e8e455d318a91b0ed119744fd40281d20464753492d0279a5ca08041543.js type=module></script>
 <script type=module>
     import VisualizationBuilder from "/tour-of-wgsl/ts/graphics_visualizer.js";
     let tour = document.getElementById('tour');

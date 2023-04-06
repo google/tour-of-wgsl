@@ -2,7 +2,7 @@
 Each member has a name and a data type.</p><p>Declare structures at module scope, separating their member-specifiers with commas.</p><p>Use dot-member notation to get at a member of a structure:</p><ul><li><code>chair.height</code> is the <code>height</code> member of the <code>chair</code> structure value.</li></ul><p>Use a functional form to create a structure value:</p><ul><li><code>MyStruct(a,b,c)</code> creates a <code>MyStruct</code> structure value with members being the values of expressions
 <code>a</code>,<code>b</code>,<code>c</code>.
 The expressions must match the member types.</li><li><code>MyStruct()</code> creates a <code>MyStruct</code> value with all zero members.
-This works if <code>MyStruct</code> is <a href=http://w3.org/TR/WGSL#constructible>constructible</a>.</li></ul></main><nav class=directional><a class=prev href=https://google.github.io/tour-of-wgsl/types/arrays/runtime-sized-arrays/><div class=title>&larr; Runtime-Sized Arrays</div></a><a class=next href=https://google.github.io/tour-of-wgsl/types/atomics/><div class=title>Atomics &rarr;</div></a></nav></article><div id=tour-wrapper><wgsl-tour id=tour><pre id=tour-content style=visibility:hidden>struct Vehicle {
+This works if <code>MyStruct</code> is <a href=http://w3.org/TR/WGSL#constructible>constructible</a>.</li></ul></main><nav class=directional><a class=prev href=https://google.github.io/tour-of-wgsl/types/arrays/runtime-sized-arrays/><div class=title>&larr; Runtime-Sized Arrays</div></a><a class=next href=https://google.github.io/tour-of-wgsl/types/atomics/><div class=title>Atomics &rarr;</div></a><script>document.addEventListener("keydown",e=>{if(e.target===document.body)switch(e.key){case"ArrowLeft":e.stopPropagation(),window.location.href="https://google.github.io/tour-of-wgsl/types/arrays/runtime-sized-arrays/";break;case"ArrowRight":e.stopPropagation(),window.location.href="https://google.github.io/tour-of-wgsl/types/atomics/";break}})</script></nav></article><div id=tour-wrapper><wgsl-tour id=tour><pre id=tour-content style=visibility:hidden>struct Vehicle {
   num_wheels: u32,
   mass_kg: f32, // The last comma is optional
 }  // Semicolon is optional
@@ -23,7 +23,7 @@ fn add_cargo(v: Vehicle, cargo_mass: f32) -&gt; Vehicle {
 }
 
 const all_zeros_vehicle = Vehicle();
-</pre></wgsl-tour></div></main><footer><main><div>&copy; 2023 Tour or WGSL</div><div><ul><li><a href=https://github.com/google/tour-of-wgsl>GitHub</a></li><li><a href=https://github.com/google/tour-of-wgsl/issues/new>File an Issue</a></li><li><a href=https://www.w3.org/TR/WGSL/>WGSL Spec</a></li><li><a href=https://www.w3.org/TR/webgpu/>WebGPU Spec</a></li></ul></div></main></footer><script src=/tour-of-wgsl/ts/app.804f3a47ca51e05c9a24d1a0563071e519afcd209df42bfd0def4925a761a673.js type=module></script>
+</pre></wgsl-tour></div></main><footer><main><div>&copy; 2023 Tour or WGSL</div><div><ul><li><a href=https://github.com/google/tour-of-wgsl>GitHub</a></li><li><a href=https://github.com/google/tour-of-wgsl/issues/new>File an Issue</a></li><li><a href=https://www.w3.org/TR/WGSL/>WGSL Spec</a></li><li><a href=https://www.w3.org/TR/webgpu/>WebGPU Spec</a></li></ul></div></main></footer><script src=/tour-of-wgsl/ts/app.46a75e8e455d318a91b0ed119744fd40281d20464753492d0279a5ca08041543.js type=module></script>
 <script type=module>
     import VisualizationBuilder from "/tour-of-wgsl/ts/value_visualizer.js";
     let tour = document.getElementById('tour');

@@ -10,7 +10,7 @@ an initializer, or both type and initializer:</p><div class=highlight><div class
 </span></span></span></code></pre></td></tr></table></div></div><p>A <code>var&lt;private></code> with no initializer will be automatically initialized with
 the zero value for the variable&rsquo;s type.</p><p>The initializer for <code>var&lt;private></code> must be a
 <a href=https://google.github.io/tour-of-wgsl/expressions/evaluation-stage/constant/>constant</a> expression.</p><p>Each shader invocation will have a unique instance of a <code>var</code> in private address-space.</p><p>Uses of a <code>var&lt;private></code> will always result in a
-<a href=https://google.github.io/tour-of-wgsl/expressions/evaluation-stage/runtime/>runtime</a> expression.</p></main><nav class=directional><a class=prev href=https://google.github.io/tour-of-wgsl/variables/var-function/><div class=title>&larr; var&lt;function></div></a><a class=next href=https://google.github.io/tour-of-wgsl/variables/var-workgroup/><div class=title>var&lt;workgroup> &rarr;</div></a></nav></article><div id=tour-wrapper><wgsl-tour id=tour><pre id=tour-content style=visibility:hidden>// var &#39;i&#39; of type &#39;i32&#39; is initialized with a value of 10
+<a href=https://google.github.io/tour-of-wgsl/expressions/evaluation-stage/runtime/>runtime</a> expression.</p></main><nav class=directional><a class=prev href=https://google.github.io/tour-of-wgsl/variables/var-function/><div class=title>&larr; var&lt;function></div></a><a class=next href=https://google.github.io/tour-of-wgsl/variables/var-workgroup/><div class=title>var&lt;workgroup> &rarr;</div></a><script>document.addEventListener("keydown",e=>{if(e.target===document.body)switch(e.key){case"ArrowLeft":e.stopPropagation(),window.location.href="https://google.github.io/tour-of-wgsl/variables/var-function/";break;case"ArrowRight":e.stopPropagation(),window.location.href="https://google.github.io/tour-of-wgsl/variables/var-workgroup/";break}})</script></nav></article><div id=tour-wrapper><wgsl-tour id=tour><pre id=tour-content style=visibility:hidden>// var &#39;i&#39; of type &#39;i32&#39; is initialized with a value of 10
 var&lt;private&gt; i : i32 = 10;
 
 // var &#39;j&#39; of type &#39;i32&#39; is automatically zero initialized
@@ -26,7 +26,7 @@ fn f() -&gt; i32 {
     assign_j(32); //  i = 10, j = 32
     return i &#43; j;
 }
-</pre></wgsl-tour></div></main><footer><main><div>&copy; 2023 Tour or WGSL</div><div><ul><li><a href=https://github.com/google/tour-of-wgsl>GitHub</a></li><li><a href=https://github.com/google/tour-of-wgsl/issues/new>File an Issue</a></li><li><a href=https://www.w3.org/TR/WGSL/>WGSL Spec</a></li><li><a href=https://www.w3.org/TR/webgpu/>WebGPU Spec</a></li></ul></div></main></footer><script src=/tour-of-wgsl/ts/app.804f3a47ca51e05c9a24d1a0563071e519afcd209df42bfd0def4925a761a673.js type=module></script>
+</pre></wgsl-tour></div></main><footer><main><div>&copy; 2023 Tour or WGSL</div><div><ul><li><a href=https://github.com/google/tour-of-wgsl>GitHub</a></li><li><a href=https://github.com/google/tour-of-wgsl/issues/new>File an Issue</a></li><li><a href=https://www.w3.org/TR/WGSL/>WGSL Spec</a></li><li><a href=https://www.w3.org/TR/webgpu/>WebGPU Spec</a></li></ul></div></main></footer><script src=/tour-of-wgsl/ts/app.46a75e8e455d318a91b0ed119744fd40281d20464753492d0279a5ca08041543.js type=module></script>
 <script type=module>
     import VisualizationBuilder from "/tour-of-wgsl/ts/value_visualizer.js";
     let tour = document.getElementById('tour');
