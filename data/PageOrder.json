@@ -14,6 +14,8 @@
     "types/matrices/constructors",
     "types/matrices/multiplication",
     "types/arrays",
+    "types/arrays/fixed-size-arrays",
+    "types/arrays/runtime-sized-arrays",
     "types/structures",
     "types/atomics",
     "types/pointers",
