@@ -24,8 +24,6 @@ jobs:
       github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success'
 
-    # if: ${{ github.event.label.name == 'gen-preview' }}
-
     runs-on: ubuntu-latest
 
     env:
@@ -56,6 +54,10 @@ jobs:
 
       - run: unzip pr.zip
 
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+
       - name: Extracting PR info
         run: |
           echo "PR=$(cat pull-request.info)" >> $GITHUB_ENV
@@ -81,4 +83,4 @@ jobs:
         with:
           header: pr-preview
           number: ${{ env.PR }}
-          message: 'PR Preview at: https://${{ github.repository_owner }}.github.io/tour-of-wgsl/pr-preview/pr-${{ env.PR }}/'
+          message: '[Preview of pull-request can be viewed here](${{ steps.pages.outputs.base_url }}/pr-preview/pr-${{ env.PR }}/)'
