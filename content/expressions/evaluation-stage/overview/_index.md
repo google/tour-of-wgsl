@@ -17,7 +17,7 @@ flowchart LR
 
 Each phase finalizes the value for expressions in a certain category, as follows:
 
-## Evaulation Phase
+## Evaluation Phase
 ### Shader creation
 * Finalizes values for `const-expressions`
 * Sub-expressions can be:
@@ -27,13 +27,13 @@ Each phase finalizes the value for expressions in a certain category, as follows
 
 ### Pipeline creation
 * Finalizes values for `override-expressions`
-* Sub-expressions can be all of the above, plus
+* Sub-expressions can anything in a `const-expression`, plus
   * override-declared values,
   * values from [GPUProgrammableStage.constants](https://gpuweb.github.io/gpuweb/#dom-gpuprogrammablestage-constants)
 
 ### Shader execution
 * Finalizes values for `runtime-expressions`
-* Sub-expressions can be all of the above, plus:
+* Sub-expressions can be anything in a `override-expression`, plus
   * let-declared values
   * any function call,
   * variable contents
