@@ -3,13 +3,11 @@ title: "Structures"
 shader: ./index.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [
-    {"expr": "an_average_infant.age_years",  "type": "u32"},
-    {"expr": "an_average_infant.height_m",  "type": "f32"},
-    {"expr": "an_average_infant.mass_kg",  "type": "f32"},
-    {"expr": "average_infant_height",  "type": "f32"},
-    {"expr": "all_zeros_person.age_years",  "type": "u32"},
-    {"expr": "all_zeros_person.height_m",  "type": "f32"},
-    {"expr": "all_zeros_person.mass_kg",  "type": "f32"}
+    {"expr": "a_bicycle.num_wheels",  "type": "u32"},
+    {"expr": "a_bicycle.mass_kg",  "type": "f32"},
+    {"expr": "bike_num_wheels",  "type": "u32"},
+    {"expr": "all_zeros_vehicle.num_wheels",  "type": "u32"},
+    {"expr": "all_zeros_vehicle.mass_kg",  "type": "f32"}
 ]}'
 ---
 
