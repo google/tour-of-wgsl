@@ -298,6 +298,16 @@ footer {
       margin: 8px 0;
     }
   }
+  div.example {
+    background-color: var(--highlight-background-colour);
+    padding: 5px;
+    border-radius: 7px;
+    border-left: 2px solid var(--main-background-colour);
+    margin: 5px;
+    p {
+      margin: 8px 0;
+    }
+  }
 
   .suffix-table {
     table {

@@ -22,17 +22,17 @@ In most cases {{< array "(N)" >}} is a
 > [pipeline-creation time]({{< ref "expressions/evaluation-stage/overview" >}}).
 > It's still "fixed" before the shader executes.
 
-<details class='example'>
-<summary>Example</summary>
+<div class='example'>
+Examples:
 
 |                          |                                                                     |
 |--------------------------|---------------------------------------------------------------------|
 | `array<f32,5>`           | A 5-element array of `f32`.                                         |
 | `array<array<f32,4>,8>`  | An array of 8 arrays of 4 f32's.                                    |
-| `array<S,c>`             | An array of `c` elements of type `S`. Here `c` must be const-declared |
+| `array<S,c>`             | An array of `c` elements of type `S`. Here `c` must be const-declared. |
 | `array<i32,4*blockSize>` | An array of i32 with 4 * `blockSize` elements. Here `blockSize` must be const-declared. |
 
-</details>
+</div>
 
 With the one exception above, fixed-size array values can be used like other plain values:
 used in expressions, passed as function arguments, returned from functions,
