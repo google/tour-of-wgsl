@@ -193,6 +193,22 @@ header {
   }
 }
 
+.footer_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  li {
+    margin-left: 10px;
+    a {
+      display: flex;
+      img {
+        align-self: center;
+        margin-right: 2px;
+      }
+    }
+  }
+}
+
 .nav_breadcrumbs {
   font-size: 0.9em;
 
