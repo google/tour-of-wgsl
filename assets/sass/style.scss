@@ -317,6 +317,18 @@ footer {
       background-color: var(--highlight-background-colour);
     }
   }
+
+  // Generic table
+  th {
+      background-color: var(--highlight-background-colour);
+  }
+  th, td {
+    border: 1px solid var(--shadow-colour);
+    padding: 5px;
+    border-radius: 7px;
+    border-left: 2px solid var(--main-background-colour);
+    margin: 5px;
+  }
 }
 
 .ascii {
