@@ -11,14 +11,17 @@ visualizerOptions: '{"fields": [
 ]}'
 ---
 
-A structure type is a named grouping of named data members.
+A structure type is a named grouping of member values.
+Each member has a name and a data type.
 
-Declare structures at module scope, separating their field-specifiers with commas.
+Declare structures at module scope, separating their member-specifiers with commas.
 
-To get at a member, follow the structure expression with a dot, then the name of the member.
+Use dot-member notation to get at a member of a structure:
+* `chair.height` is the `height` member of the `chair` structure value.
 
-Use a functional form to create a structure:
+Use a functional form to create a structure value:
 * `MyStruct(a,b,c)` creates a `MyStruct` structure value with members being the values of expressions
    `a`,`b`,`c`.
    The expressions must match the member types.
-* `MyStruct()` creates a `MyStruct` value with all zero members, when `MyStruct` is [constructible](http://w3.org/TR/WGSL#constructible).
+* `MyStruct()` creates a `MyStruct` value with all zero members.
+    This works if `MyStruct` is [constructible](http://w3.org/TR/WGSL#constructible).
