@@ -1,4 +1,4 @@
-const first_fibs = array<i32,7>(1,1,2,3,5,8,13);
+const first_fibs = array<i32, 7>(1,1,2,3,5,8,13);
 
 const i = 4;
 const ith_fib = first_fibs[i];
@@ -9,7 +9,7 @@ const three = 3;
 const fibs_copy: array<i32, 2 * three + 1> = first_fibs;
 
 // A no-argument array constructor fills the array with zeros.
-const nine_zero_array = array<u32,9>();
+const nine_zero_array = array<u32, 9>();
 const ith_zero = nine_zero_array[i];
 
 // A function that returns a fixed-size array.
