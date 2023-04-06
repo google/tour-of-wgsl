@@ -2,4 +2,7 @@
 title: "Attributes"
 ---
 
+## STUB
+This page has yet to be written. The below is a stub of potential content.
+
 * `@group`, `@binding`
