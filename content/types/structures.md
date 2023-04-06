@@ -1,6 +1,5 @@
 ---
 title: "Structures"
-url: types/structures
 ---
 
 ```rust

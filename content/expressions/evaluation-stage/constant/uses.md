@@ -1,6 +1,5 @@
 ---
 title: "Uses"
-url: expressions/evaluation-stage/constant/uses
 shader: ./uses.wgsl
 ---
 

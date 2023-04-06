@@ -1,6 +1,5 @@
 ---
 title: "@const built-ins"
-url: expressions/evaluation-stage/constant/builtins
 shader: ./builtins.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [{"expr": "angle_rad", "type": "f32"}]}'

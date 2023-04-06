@@ -1,6 +1,5 @@
 ---
 title: "Shadowing"
-url: variables/shadowing
 ---
 
 Function-scope `var` and `const` variables can shadow any function, type,

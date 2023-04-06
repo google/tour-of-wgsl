@@ -1,6 +1,5 @@
 ---
 title: "Numeric Literals"
-url: expressions/evaluation-stage/constant/numeric-literals
 ---
 
 A WGSL numeric literal is a constant-expression representing a number.

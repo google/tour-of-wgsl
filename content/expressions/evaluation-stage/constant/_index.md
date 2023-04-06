@@ -1,6 +1,5 @@
 ---
 title: "Constant expressions"
-url: expressions/evaluation-stage/constant
 ---
 
 Constant-expressions are value expressions computed at

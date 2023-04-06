@@ -1,6 +1,5 @@
 ---
 title: "If Statements"
-url: control-flow/if-statements
 shader: ./if.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [

@@ -1,6 +1,5 @@
 ---
 title: "const"
-url: variables/const
 ---
 
 A `const` declaration gives a name to a

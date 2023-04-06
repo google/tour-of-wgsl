@@ -1,6 +1,5 @@
 ---
 title: "Matrix constructors"
-url: types/matrices/constructors
 shader: ./constructors.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [

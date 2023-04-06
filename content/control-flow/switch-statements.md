@@ -1,6 +1,5 @@
 ---
 title: "Switch Statements"
-url: control-flow/switch-statement
 shader: ./switch.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [

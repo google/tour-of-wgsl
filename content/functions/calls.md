@@ -1,6 +1,5 @@
 ---
 title: "Function Calls"
-url: functions/calls
 shader: ./calls.wgsl
 ---
 

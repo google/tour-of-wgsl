@@ -1,7 +1,5 @@
 ---
 title: "For Statements"
-url: control-flow/for-statements
-
 shader: ./for.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [

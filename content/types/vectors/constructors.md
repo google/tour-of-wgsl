@@ -1,6 +1,5 @@
 ---
 title: "Vector constructors"
-url: types/vectors/constructors
 shader: ./constructors.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [

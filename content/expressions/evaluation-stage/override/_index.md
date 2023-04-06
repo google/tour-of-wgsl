@@ -1,6 +1,5 @@
 ---
 title: "Override expressions"
-url: expressions/evaluation-stage/override
 ---
 
 Override-expressions are value expressions that are evaluated at

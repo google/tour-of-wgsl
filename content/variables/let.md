@@ -1,6 +1,5 @@
 ---
 title: "let"
-url: variables/let
 ---
 
 A `let` declaration gives a name to a

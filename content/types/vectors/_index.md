@@ -1,6 +1,5 @@
 ---
 title: "Vectors"
-url: types/vectors
 shader: ./index.wgsl
 ---
 
