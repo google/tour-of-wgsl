@@ -21,7 +21,7 @@
     "expressions/evaluation-stage",
     "expressions/evaluation-stage/constant",
     "expressions/evaluation-stage/constant/bool-literals",
-    "expressions/evaluation-stage/constant/numeric-limits",
+    "expressions/evaluation-stage/constant/numeric-literals",
     "expressions/evaluation-stage/constant/builtins",
     "expressions/evaluation-stage/constant/uses",
     "expressions/evaluation-stage/override",
