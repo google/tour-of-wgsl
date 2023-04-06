@@ -147,6 +147,18 @@ header {
     header .nav_sections li {
       border-right: 1px solid rgba(0, 0, 0, 0.3);
       text-align: center; } }
+.footer_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: right; }
+  .footer_links li {
+    margin-left: 10px; }
+    .footer_links li a {
+      display: flex; }
+      .footer_links li a img {
+        align-self: center;
+        margin-right: 2px; }
+
 .nav_breadcrumbs {
   font-size: 0.9em; }
   .nav_breadcrumbs ul {
