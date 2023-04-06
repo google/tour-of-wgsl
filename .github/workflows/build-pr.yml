@@ -1,25 +1,19 @@
-# .github/workflows/preview.yml
-name: Deploy PR previews
+name: Build PR
+
+# read-only repo token
+# no access to secrets
 
 on:
   pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
-
-permissions:
-  contents: write
-  pull-requests: write
-
-concurrency: preview-${{ github.ref }}
+    types: [opened, edited, synchronize]
 
 jobs:
-  deploy-preview:
+  build:
     runs-on: ubuntu-latest
+
     env:
       HUGO_VERSION: 0.111.3
+
     steps:
       - name: Install Hugo CLI
         run: |
@@ -51,7 +45,10 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+      - name: Adding PR metadata
+        run: echo "${{ github.event.number }}" > public/pull-request.info
+
+      - uses: actions/upload-artifact@v2
         with:
-          source-dir: ./public
+          name: pr
+          path: public/

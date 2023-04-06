@@ -1,0 +1,84 @@
+name: Deploy PR
+
+# read-write repo token
+# access to secrets
+
+on:
+  workflow_run:
+    workflows: ['Build PR']
+    types:
+      - completed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deploy-pr:
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+
+    # if: ${{ github.event.label.name == 'gen-preview' }}
+
+    runs-on: ubuntu-latest
+
+    env:
+      id: ${{ github.event.workflow_run.id }}
+      HUGO_VERSION: 0.111.3
+
+    steps:
+      - name: 'Download artifact'
+        uses: actions/github-script@v3.1.0
+        with:
+          script: |
+            var artifacts = await github.actions.listWorkflowRunArtifacts({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               run_id: ${{github.event.workflow_run.id }},
+            });
+            var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
+              return artifact.name == "pr"
+            })[0];
+            var download = await github.actions.downloadArtifact({
+               owner: context.repo.owner,
+               repo: context.repo.repo,
+               artifact_id: matchArtifact.id,
+               archive_format: 'zip',
+            });
+            var fs = require('fs');
+            fs.writeFileSync('${{github.workspace}}/pr.zip', Buffer.from(download.data));
+
+      - run: unzip pr.zip
+
+      - name: Extracting PR info
+        run: |
+          echo "PR=$(cat pull-request.info)" >> $GITHUB_ENV
+          rm pull-request.info
+
+      - run: |
+          git init
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit --allow-empty -m "deploy needs a HEAD"
+
+      - name: Deploy preview GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          branch: gh-pages
+          folder: .
+          target-folder: pr-preview/pr-${{ env.PR }}
+          commit-message: Deploy preview for PR ${{ env.PR }}
+          clean-exclude: pr-preview/
+
+      - name: Add PR comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-preview
+          number: ${{ env.PR }}
+          message: 'PR Preview at: https://${{ github.repository_owner }}.github.io/tour-of-wgsl/pr-preview/pr-${{ env.PR }}/'
