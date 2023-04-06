@@ -1,0 +1,7 @@
+{{- $str := .Get 0 -}}
+{{- $str = strings.Replace $str "\u003c" "&lt;" -}}
+{{- $str = strings.Replace $str "\u003e" "&gt;" -}}
+{{- $str = strings.Replace $str "(N)" "<span class='template template-array-n'>N</span>" -}}
+{{- $str = strings.Replace $str "(T)" "<span class='template template-array-t'>T</span>" -}}
+
+<span class='code'>{{.Page.RenderString $str}}</span>
