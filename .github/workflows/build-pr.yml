@@ -5,6 +5,9 @@ name: Build PR
 
 on:
   pull_request:
+    - opened
+    - edited
+    - synchronize
 
 jobs:
   build:

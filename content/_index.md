@@ -7,6 +7,8 @@ visualizer: /ts/graphics_visualizer.ts
 
 # Welcome to the tour of WGSL
 
+Testing testing 123.
+
 This site is a quick introduction to the [WebGPU Shading
 Language](https://w3.org/TR/WGSL). The tour provides an overview
 of the syntax and features of WGSL, but assumes a familiarity with
