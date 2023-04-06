@@ -18,6 +18,8 @@
     "types/arrays/runtime-sized-arrays",
     "types/structures",
     "types/atomics",
+    "types/atomics/overview",
+    "types/atomics/atomic-types",
     "types/pointers",
     "expressions",
     "expressions/evaluation-stage",
