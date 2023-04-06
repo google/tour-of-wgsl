@@ -3,6 +3,9 @@ title: "Storage Buffers"
 url: binding-points/storage-buffers
 ---
 
+## STUB
+This page has yet to be written. The below is a stub of potential content.
+
 * `var<storage> s: T`
 * `var<storage, read> s: T`
 * `var<storage, read_write> s: T`
