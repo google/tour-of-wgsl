@@ -9,44 +9,40 @@ flowchart LR
    sc[Shader creation time]
    pc[Pipeline creation time]
    rt[Shader execution time]
+   style sc fill:#fff5ad
+   style pc fill:#fff5ad
+   style rt fill:#fff5ad
    sc --> pc --> rt
 ```
 
 Each phase finalizes the value for expressions in a certain category, as follows:
 
-<table>
-<thead><th>Evaluation phase
-       <th>Finalizes values for...
-       <th>Sub-expressions can be...
-<tr><td>Shader creation
-    <td>const-expressions
-    <td><ul>
-        <li>literals,
-        <li><tt>@const</tt> function calls,
-        <li>const-declared values
-        </ul>
-<tr><td>Pipeline creation
-    <td>override-expressions
-    <td>All of the above, plus:
-        <ul>
-        <li>override-declared values,
-        <li>values from
-            <a href="https://gpuweb.github.io/gpuweb/#dom-gpuprogrammablestage-constants"
-                  >GPUProgrammableStage.constants</a>
-        </ul>
-<tr><td>Shader execution
-    <td>runtime-expressions
-    <td>All of the above, plus:
-        <ul>
-        <li>let-declared values
-        <li>any function call,
-        <li>variable contents
-        <li>reference or pointer to a variable
-        </ul>
-</table>
+## Evaulation Phase
+### Shader creation
+* Finalizes values for `const-expressions`
+* Sub-expressions can be:
+  * literals,
+  * `@const` function calls,
+  * const-declared values
 
-<div style="padding:2ex">
-<a name=in-context"/>
+### Pipeline creation
+* Finalizes values for `override-expressions`
+* Sub-expressions can be all of the above, plus
+  * override-declared values,
+  * values from [GPUProgrammableStage.constants](https://gpuweb.github.io/gpuweb/#dom-gpuprogrammablestage-constants)
+
+### Shader execution
+* Finalizes values for `runtime-expressions`
+* Sub-expressions can be all of the above, plus:
+  * let-declared values
+  * any function call,
+  * variable contents
+  * reference or pointer to a variable
+
+
+## In Context
+<figure>
+
 The shader phases fit into a WebGPU application as follows:
 
 ```mermaid
@@ -75,4 +71,5 @@ sequenceDiagram
   C -->> A: fulfill Promise
   deactivate C
 ```
-</div>
+
+</figure>
