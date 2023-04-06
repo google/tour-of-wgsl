@@ -17,6 +17,7 @@
     "codemirror": "^5.65.12",
     "eslint": "^8.36.0",
     "eslint-plugin-import": "^2.26.0",
+    "mermaid": "^10.1.0",
     "prettier": "^2.8.6",
     "typedoc": "^0.23.28",
     "typescript": "^5.0.2"

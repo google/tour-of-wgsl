@@ -59,12 +59,12 @@
     </div>
   </main>
 
-
   {{- partial "footer.html" . -}}
 
   {{ $js := resources.Get "ts/app.ts" | js.Build | resources.Fingerprint }}
   <script src='{{ $js.RelPermalink }}' type='module'></script>
 
+  {{- partial "mermaid.html" . -}}
 
   {{- $bootstrap := ""}}
   {{- if .Params.Bootstrap}}

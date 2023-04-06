@@ -13,3 +13,6 @@
  */
 
 import './wgsl-tour';
+import Mermaid from 'mermaid';
+
+window.Mermaid = Mermaid;
