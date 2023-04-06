@@ -229,14 +229,6 @@ footer {
     padding: 5px 15px; }
   #content .suffix-table tr:nth-child(2) {
     background-color: var(--highlight-background-colour); }
-  #content th {
-    background-color: var(--highlight-background-colour); }
-  #content th, #content td {
-    border: 1px solid var(--shadow-colour);
-    padding: 5px;
-    border-radius: 7px;
-    border-left: 2px solid var(--main-background-colour);
-    margin: 5px; }
 
 .ascii {
   line-height: normal; }
