@@ -15,7 +15,11 @@ partial 'all-pages'
 
 *******************************************************************/ -}}
 {{ define "partials/page_by_name" }}
-{{ return (site).GetPage . }}
+{{ $page := (site).GetPage . }}
+{{ if not $page }}
+{{ errorf "data/PageOrder.json refers to non-existant page: %v" . }}
+{{ end }}
+{{ return $page }}
 {{ end }}
 
 {{return apply (site).Data.PageOrder "partial" "page_by_name" "."}}
