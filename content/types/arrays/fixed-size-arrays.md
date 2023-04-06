@@ -8,16 +8,16 @@ visualizerOptions: '{"fields": [
 ]}'
 ---
 
-A fixed-size array type is declared as {{< vec "array<(T),(N)>" >}}, where
-{{< vec "(T)" >}} is the element type (with some restrictions), and 
-{{< vec "(N)" >}} is the element count.
+A fixed-size array type is declared as {{< array "array<(T),(N)>" >}}, where
+{{< array "(T)" >}} is the element type (with some restrictions), and 
+{{< array "(N)" >}} is the element count.
 
-In most cases {{< vec "(N)" >}} is a
+In most cases {{< array "(N)" >}} is a
 [const-expression]({{< ref "expressions/evaluation-stage/constant" >}}).
 
 > There is one exception to this rule:
 > When the array is used as the type of a workgroup variable, 
-> {{< vec "(N)" >}} can be an [override-expression]({{< ref "expressions/evaluation-stage/override" >}}).
+> {{< array "(N)" >}} can be an [override-expression]({{< ref "expressions/evaluation-stage/override" >}}).
 > That means the array size can be adjusted at
 > [pipeline-creation time]({{< ref "expressions/evaluation-stage/overview" >}}).
 > It's still "fixed" before the shader executes.
