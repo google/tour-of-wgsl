@@ -212,13 +212,13 @@ footer {
       text-transform: lowercase; }
       #content nav.directional a.next {
         text-align: end; }
-  #content details.example {
+  #content details.example, #content div.example {
     background-color: var(--highlight-background-colour);
     padding: 5px;
     border-radius: 7px;
     border-left: 2px solid var(--main-background-colour);
     margin: 5px; }
-    #content details.example p {
+    #content details.example p, #content div.example p {
       margin: 8px 0; }
   #content .suffix-table table {
     border: 1px solid var(--shadow-colour); }
@@ -260,7 +260,7 @@ a.next {
   border: 1px solid;
   padding: 1px; }
 
-.template-vec-n {
+.template-vec-n, .template-array-n {
   background-color: #81d3ff49;
   border-color: #81d3ffab; }
 
@@ -268,7 +268,7 @@ a.next {
   background-color: #4cff553e;
   border-color: #1eff297d; }
 
-.template-vec-t {
+.template-vec-t, .template-array-t {
   background-color: #ff818149;
   border-color: #ff8181ab; }
 
