@@ -28,26 +28,7 @@
         {{- block "main" . -}}{{- end -}}
       </main>
 
-      <nav class='directional'>
-        {{- $all_pages := partial "all-pages" }}
-        {{- $page_index := partial "index-of" (slice $all_pages .) }}
-        {{- if gt $page_index 0 }}
-        {{- $prev := index $all_pages (sub $page_index 1) }}
-        <a class='prev' href="{{ $prev.Permalink }}">
-          <div class='title'>&larr; {{ $prev.Title }}</div>
-        </a>
-        {{- else -}}
-        <!-- first page has no previous button, so put in a fake element -->
-        <div class='prev'></div>
-        {{- end -}}
-
-        {{- if lt $page_index (sub (len $all_pages) 1) }}
-        {{- $next := index $all_pages (add $page_index 1) }}
-        <a class='next' href="{{ $next.Permalink }}">
-          <div class='title'>{{ $next.Title }} &rarr;</div>
-        </a>
-        {{- end -}}
-      </nav>
+      {{- partial "page-nav.html" . }}
     </article>
 
     <div id='tour-wrapper'>

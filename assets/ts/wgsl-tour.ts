@@ -77,7 +77,7 @@ export class WGSLTour extends HTMLElement {
     };
 
     this.editor = CodeMirror.fromTextArea(textarea, {
-      autofocus: true,
+      autofocus: false,
       lineNumbers: true,
       mode: 'wgsl',
       dragDrop: false,
