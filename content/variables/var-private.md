@@ -1,6 +1,5 @@
 ---
 title: "var<private>"
-url: variables/var-private
 shader: ./var-private.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [{"expr": "f()", "type": "i32"}]}'

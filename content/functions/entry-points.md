@@ -1,6 +1,5 @@
 ---
 title: "Entry Points"
-url: functions/entry-points
 shader: ./entry-points.wgsl
 ---
 

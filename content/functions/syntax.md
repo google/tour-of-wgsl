@@ -1,6 +1,5 @@
 ---
 title: "Syntax"
-url: functions/syntax
 shader: ./syntax.wgsl
 ---
 

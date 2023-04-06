@@ -1,6 +1,5 @@
 ---
 title: "var<workgroup>"
-url: variables/var-workgroup
 shader: ./var-workgroup.wgsl
 ---
 

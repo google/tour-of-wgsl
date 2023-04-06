@@ -1,6 +1,5 @@
 ---
 title: "var<function>"
-url: variables/var-function
 shader: ./var-function.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [{"expr": "f()", "type": "i32"}]}'

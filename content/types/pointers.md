@@ -1,6 +1,5 @@
 ---
 title: "Pointers"
-url: types/pointers
 ---
 
 * `ptr<i32, function>`

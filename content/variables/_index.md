@@ -1,6 +1,5 @@
 ---
 title: "Variables and declared values"
-url: variables
 ---
 
 A *variable* represents a value stored in memory.

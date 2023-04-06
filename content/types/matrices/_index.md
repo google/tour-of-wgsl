@@ -1,6 +1,5 @@
 ---
 title: "Matrices"
-url: types/matrices
 shader: ./index.wgsl
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Arrays"
-url: types/arrays
 ---
 
 * `array<f32, 8>`

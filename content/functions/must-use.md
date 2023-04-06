@@ -1,6 +1,5 @@
 ---
 title: "@must_use"
-url: functions/must-use
 shader: ./must-use.wgsl
 ---
 

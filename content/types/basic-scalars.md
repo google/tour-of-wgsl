@@ -1,6 +1,5 @@
 ---
 title: "Concrete scalars"
-url: types/concrete-scalars
 ---
 
 The fundamental WGSL types are:

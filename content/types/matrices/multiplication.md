@@ -1,6 +1,5 @@
 ---
 title: "Matrix multiplication"
-url: types/matrices/multiplication
 shader: ./multiplication.wgsl
 visualizer: /ts/value_visualizer.ts
 visualizerOptions: '{"fields": [

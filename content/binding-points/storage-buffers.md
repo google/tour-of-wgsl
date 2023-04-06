@@ -1,6 +1,5 @@
 ---
 title: "Storage Buffers"
-url: binding-points/storage-buffers
 ---
 
 * `var<storage> s: T`

@@ -1,6 +1,5 @@
 ---
 title: "Operators"
-url: expressions/operators
 ---
 
 All the numeric types support a basic set of arithmetic operators:

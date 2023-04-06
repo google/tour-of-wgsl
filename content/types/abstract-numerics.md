@@ -1,6 +1,5 @@
 ---
 title: "Abstract-numerics"
-url: types/abstract-numerics
 shader: ./abstract-numerics.wgsl
 ---
 
