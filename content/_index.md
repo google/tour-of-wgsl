@@ -37,6 +37,8 @@ The tour is organized into sections:
 {{< sections >}}
 
 Each section has several sub-pages, and you can navigate forward
-and backward using the buttons on the bottom of each page.
+and backward using the buttons on the bottom of each page, or by using the
+left and right keys on your keyboard.
+
 You can quickly get back to a higher level page using the breadcrumb
 links at the top of this pane.

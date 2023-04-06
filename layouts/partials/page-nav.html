@@ -1,0 +1,42 @@
+<nav class='directional'>
+    {{- $all_pages := partial "all-pages" }}
+    {{- $page_index := partial "index-of" (slice $all_pages .) }}
+    {{- $prev := index $all_pages (sub $page_index 1) }}
+    {{- $next := index $all_pages (add $page_index 1) }}
+
+    {{- if $prev }}
+    <a class='prev' href="{{ $prev.Permalink }}">
+        <div class='title'>&larr; {{ $prev.Title }}</div>
+    </a>
+    {{- else }}
+    <!-- first page has no previous button, so put in a fake element -->
+    <div class='prev'></div>
+    {{- end }}
+
+    {{- if $next }}
+    <a class='next' href="{{ $next.Permalink }}">
+        <div class='title'>{{ $next.Title }} &rarr;</div>
+    </a>
+    {{- end }}
+
+    <script>
+        document.addEventListener("keydown", (event) => {
+            if (event.target === document.body) {
+                switch (event.key) {
+                {{- if $prev }}
+                    case "ArrowLeft":
+                        event.stopPropagation();
+                        window.location.href = "{{ $prev.Permalink }}";
+                        break;
+                {{- end }}
+                {{- if $next }}
+                    case "ArrowRight":
+                        event.stopPropagation();
+                        window.location.href = "{{ $next.Permalink }}";
+                        break;
+                {{- end }}
+                }
+            }
+        });
+    </script>
+</nav>
