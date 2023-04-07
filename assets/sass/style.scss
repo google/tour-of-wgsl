@@ -413,15 +413,15 @@ a.next {
   background-color: #4cff553e;
   border-color: #1eff297d;
 }
-.template-vec-t, .template-array-t, .template-atomic-t {
+.template-vec-t, .template-array-t, .template-atomic-t, .template-ptr-t {
   background-color: #ff818149;
   border-color: #ff8181ab;
 }
-.template-mat-c {
+.template-mat-c, .template-ptr-as {
   background-color: #81d3ff49;
   border-color: #81d3ffab;
 }
-.template-mat-r {
+.template-mat-r, .template-ptr-am {
   background-color: #4cff553e;
   border-color: #1eff297d;
 }
