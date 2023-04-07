@@ -49,8 +49,12 @@ export default class NoopVizualizationBuilder implements VisualizerBuilder {
       code: shader,
     });
 
-    const compilationInfo = await shaderModule.getCompilationInfo();
-    if (compilationInfo.messages.length != 0) {
+    // getCompilationInfo() was previously called compilationInfo().
+    // TODO: Just use shaderModule.getCompilationInfo() after May 2023.
+    const compilationInfo = shaderModule.getCompilationInfo
+      ? await shaderModule.getCompilationInfo()
+      : await (shaderModule as any).compilationInfo();
+    if (compilationInfo.messages.length !== 0) {
       throw new CompilationFailure(
         compilationInfo.messages.map((m) => ({
           line: m.lineNum,
