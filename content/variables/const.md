@@ -15,4 +15,4 @@ const const_with_type_inferred_from_initializer = 42;
 ```
 
 The initializer of a `const` must be a
-[runtime]({{< ref "/expressions/evaluation-stage/runtime" >}}) expression.
+[const]({{< ref "/expressions/evaluation-stage/constant" >}})-expression.
