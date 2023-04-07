@@ -59,7 +59,7 @@ Vectors have three kinds of constructors:
    <details class='example'>
      <summary>Example</summary>
 
-     `vec4f(1, vec2(2, 3), 4)` constructs a `vec4<f32>` with the `.x`, `.y`, and `.z` elements initialized with `1`, `2`, `3`, and `4`, respectively.
+     `vec4f(1, vec2(2, 3), 4)` constructs a `vec4<f32>` with the `.x`, `.y`, `.z` and `.w` elements initialized with `1`, `2`, `3`, and `4`, respectively.
 
    </details>
 
