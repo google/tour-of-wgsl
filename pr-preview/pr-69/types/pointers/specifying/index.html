@@ -6,7 +6,7 @@ or <span class=code>ptr&lt;<span class='template template-ptr-as'>AS</span>,<spa
 , where</p><ul><li><span class=code><span class='template template-ptr-as'>AS</span></span>
 is an address space,</li><li><span class=code><span class='template template-ptr-t'>T</span></span>
 is a type, known as the store type, and</li><li><span class=code><span class='template template-ptr-am'>AM</span></span>
-is an access mode.</li></ul><p>The access mode can only written in WGSL mode when the address space is <code>storage</code>,
+is an access mode.</li></ul><p>The access mode can only be written in WGSL mode when the address space is <code>storage</code>,
 and defaults in this case to <code>read</code>.
 Otherwise the acces mode takes a <a href=https://w3.org/TR/WGSL#address-space>default based on address space</a>.</p></main><nav class=directional><a class=prev href=https://google.github.io/tour-of-wgsl/pr-preview/pr-69/types/pointers/><div class=title>&larr; Pointers</div></a><a class=next href=https://google.github.io/tour-of-wgsl/pr-preview/pr-69/types/pointers/using/><div class=title>Using pointers &rarr;</div></a><script>document.addEventListener("keydown",e=>{if(e.target===document.body)switch(e.key){case"ArrowLeft":e.stopPropagation(),window.location.href="https://google.github.io/tour-of-wgsl/pr-preview/pr-69/types/pointers/";break;case"ArrowRight":e.stopPropagation(),window.location.href="https://google.github.io/tour-of-wgsl/pr-preview/pr-69/types/pointers/using/";break}})</script></nav></article><div id=tour-wrapper><wgsl-tour id=tour><pre id=tour-content style=visibility:hidden>alias ptr_to_i32_in_workgroup = ptr&lt;workgroup, i32&gt;;
 alias ptr_to_u32_in_function = ptr&lt;function, u32&gt;;
