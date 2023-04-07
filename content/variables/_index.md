@@ -1,5 +1,5 @@
 ---
-title: "Variables and declared values"
+title: "Variables"
 ---
 
 A *variable* represents a value stored in memory.
