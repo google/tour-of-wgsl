@@ -149,15 +149,24 @@ header {
       text-align: center; } }
 .footer_links {
   display: flex;
-  flex-direction: row;
-  justify-content: right; }
+  flex-direction: column;
+  justify-content: center; }
   .footer_links li {
     margin-left: 10px; }
     .footer_links li a {
       display: flex; }
       .footer_links li a img {
         align-self: center;
-        margin-right: 2px; }
+        margin-right: 2px;
+        width: 16px;
+        height: 16px; }
+        .footer_links li a img.small-icon {
+          width: 12px;
+          height: 12px; }
+
+@media screen and (min-width: 1024px) {
+  .footer_links {
+    flex-direction: row; } }
 
 .nav_breadcrumbs {
   font-size: 0.9em; }
