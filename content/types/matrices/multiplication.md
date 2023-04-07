@@ -8,7 +8,7 @@ visualizerOptions: '{"fields": [
     {"expr": "mul_m2x3_by_s",    "type": "mat2x3f"},
     {"expr": "mul_v3_by_m2x3",   "type": "vec2f"},
     {"expr": "mul_m2x3_by_v2",   "type": "vec3f"},
-    {"expr": "mul_m3x2_by_m2x4", "type": "mat4x3f"}
+    {"expr": "mul_m2x3_by_m4x2", "type": "mat4x3f"}
 ]}'
 ---
 
