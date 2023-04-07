@@ -18,4 +18,4 @@ const mul_v3_by_m2x3 : vec2f = vec3(9, 8, 7) * m2x3;
 // ╰      ╯           ╰           ╯
 const mul_m2x3_by_v2 : vec3f = m2x3 * vec2(9, 8);
 
-const mul_m3x2_by_m2x4 : mat4x3f = m2x3 * mat4x2f(7, 8, 9, 10, 11, 12, 13, 14);
+const mul_m2x3_by_m4x2 : mat4x3f = m2x3 * mat4x2f(7, 8, 9, 10, 11, 12, 13, 14);
