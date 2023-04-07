@@ -257,7 +257,16 @@ footer {
   border-radius: 7px;
   padding: 5px; }
   .warning:before {
-    content: url("https://google.github.io/tour-of-wgsl/third_party/icons/material/warning.svg"); }
+    content: "";
+    display: block;
+    margin-top: .9em;
+    margin-left: 1em;
+    margin-right: .5em;
+    height: 1.5em;
+    width: 1.5em;
+    background-image: url("https://google.github.io/tour-of-wgsl/third_party/icons/material/warning.svg");
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat; }
 
 .ascii {
   line-height: normal; }
