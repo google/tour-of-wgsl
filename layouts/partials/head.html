@@ -13,8 +13,9 @@
   <meta http-equiv="origin-trial"
     content="ApaY+uLs0pKNwx5fiXtUO8/jdLQlmgbf1OKGkN1SnYTEj69n6RmvnaTIo+ZAvd/Lk1N5ouhPIMWzkd3Rafgu3QoAAABQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5naXRodWIuaW86NDQzIiwiZmVhdHVyZSI6IldlYkdQVSIsImV4cGlyeSI6MTY5MTcxMTk5OX0=" />
 
+  {{ $options := (dict "vars" (dict "$base_url" .Site.BaseURL)) }}
   {{ $sass := resources.Get "sass/style.scss" }}
-  {{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
+  {{ $style := $sass | resources.ToCSS $options | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   {{ $title := print .Title " | " .Site.Title }}
