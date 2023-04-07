@@ -356,7 +356,16 @@ footer {
   border-radius: 7px;
   padding: 5px;
   &:before {
-    content: url("#{$base_url}third_party/icons/material/warning.svg");
+    content: "";
+    display: block;
+    margin-top: .9em;
+    margin-left: 1em;
+    margin-right: .5em;
+    height: 1.5em;
+    width: 1.5em;
+    background-image: url("#{$base_url}third_party/icons/material/warning.svg");
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
   }
 }
 
