@@ -58,7 +58,7 @@ sequenceDiagram
   A ->>C: device.createComputePipeline(...)<br/>or device.createRenderPipeline(...)<br>Provides GPUProgrammablestage.constants
   activate C
   Note right of C: Pipeline-creation time
-  C -->> A: a GPUComputePipeline
+  C -->> A: a GPUComputePipeline<br/>or GPURenderPipeline
   deactivate C
   Note over A,C: Create and bind resources,<br>Record GPU commands ...
   %%Note over A,C: Submit commands
