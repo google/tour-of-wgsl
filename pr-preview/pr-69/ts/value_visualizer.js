@@ -272,8 +272,8 @@ fn main() {
     const shaderModule = this.device.createShaderModule({
       code: shader
     });
-    const compilationInfo = await shaderModule.getCompilationInfo();
-    if (compilationInfo.messages.length != 0) {
+    const compilationInfo = shaderModule.getCompilationInfo ? await shaderModule.getCompilationInfo() : await shaderModule.compilationInfo();
+    if (compilationInfo.messages.length !== 0) {
       this.outputText.innerHTML = "";
       throw new CompilationFailure(
         compilationInfo.messages.map((m) => ({

@@ -1,23 +1,20 @@
-struct Particle {
-   momentum: vec3f,
-   pos: vec3f,
-   velocity: vec3f,
+fn f() {
+  var x: f32 = 1.5;
+  let px = &x;  // Get a pointer to x
+  *px = 3.0;    // Update x through px.
+  // Now x is 3.0
 }
-@group(0) @binding(0)
-var<storage,read_write> particles: array<Particle>;
 
-fn sequentially_update_momenta() {
-  let particles_ptr = &particles;  // Here is a pointer
-  for (var i: u32; i < arrayLength(particles_ptr); i++) {
-    // Use & to get a pointer as a short name for something inside a big variable.
-    let a_particle = &particles[i];
 
-    // We could have spelled out the pointer type in full.
-    // let a_particle: ptr<storage,Particle,read_write> = &particles[i];
+var<private> age: f32;
 
-    // Now use 'a_particle' as a ahort name.
-    let its_pos = (*a_particle).pos;
-    let its_velocity = (*a_particle).velocity;
-    (*a_particle).momentum = its_pos * its_velocity;
-  }
+fn happy_birthday() {
+  let age_ptr = &age;       // Get a pointer.
+  *age_ptr = *age_ptr + 1;  // Updates 'age'
+}
+
+fn main() {
+  age = 18.0;
+  happy_birthday();
+  // Now age is 19.0
 }
