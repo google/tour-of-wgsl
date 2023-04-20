@@ -15,7 +15,7 @@ fn init_counters() {
   // Now i is 0;
 }
 
-// fn bad_address_space(p: ptr&lt;workgroup,u32&gt;) { } // Error 1: invalid address space
+// fn bad_address_space(p: ptr&lt;workgroup,u32&gt;) { } // Error: invalid address space
 
 struct Cursor {
   read_at: u32,
@@ -23,7 +23,7 @@ struct Cursor {
 }
 var&lt;private&gt; cursor: Cursor;
 fn bad_pass_ptr_to_part_of_composite() {
-  //resetCounter(&amp;cursor.read_at); // Error 2: Can&#39;t pass pointer to part of composite
+  //reset_counter(&amp;cursor.read_at); // Error: Can&#39;t pass pointer to part of composite
 }
 </pre></wgsl-tour></div></main><footer><main><div>&copy; 2023 Tour or WGSL</div><div><ul class=footer_links><li><a href=https://github.com/google/tour-of-wgsl><img class=small-icon src=https://google.github.io/tour-of-wgsl/pr-preview/pr-69//third_party/icons/github/github-mark.svg>
 GitHub</a></li><li><a href=https://github.com/google/tour-of-wgsl/edit/main/content/types/pointers/passing_pointers.md><img src=https://google.github.io/tour-of-wgsl/pr-preview/pr-69//third_party/icons/material/pencil.svg>
