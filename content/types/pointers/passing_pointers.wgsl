@@ -11,7 +11,7 @@ fn init_counters() {
   // Now i is 0;
 }
 
-// fn bad_address_space(p: ptr<workgroup,u32>) { } // Error 1: invalid address space
+// fn bad_address_space(p: ptr<workgroup,u32>) { } // Error: invalid address space
 
 struct Cursor {
   read_at: u32,
@@ -19,5 +19,5 @@ struct Cursor {
 }
 var<private> cursor: Cursor;
 fn bad_pass_ptr_to_part_of_composite() {
-  //resetCounter(&cursor.read_at); // Error 2: Can't pass pointer to part of composite
+  //reset_counter(&cursor.read_at); // Error: Can't pass pointer to part of composite
 }
