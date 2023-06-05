@@ -15,7 +15,7 @@ fn sequentially_update_momenta() {
     // We could have spelled out the pointer type in full.
     // let a_particle: ptr<storage,Particle,read_write> = &particles[i];
 
-    // Now use 'a_particle' as a ahort name.
+    // Now use 'a_particle' as a short name.
     let its_pos = (*a_particle).pos;  // Parentheses are required.
     let its_velocity = (*a_particle).velocity;
     (*a_particle).momentum = its_pos * its_velocity;
