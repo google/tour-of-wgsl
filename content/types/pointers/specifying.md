@@ -23,4 +23,4 @@ Pointers into `storage` address space can use `read` or `read_write` access mode
 with the default being `read`.
 
 Don't write the access mode in other cases.
-They always use the [default for the address space](https://w3.orgTR/WGSL#address-space).
+They always use the [default for the address space](https://w3.org/TR/WGSL#address-space).
