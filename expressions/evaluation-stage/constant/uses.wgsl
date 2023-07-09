@@ -11,7 +11,7 @@ alias my_array = array<i32, my_constant*2>;
 @compute @workgroup_size(my_constant)
 fn compute_main() {}
 
-// Use my_constant as the argument to a @location attibute
+// Use my_constant as the argument to a @location attribute
 struct VertexInput {
     @location(my_constant) texcoords : vec2f,
 };
