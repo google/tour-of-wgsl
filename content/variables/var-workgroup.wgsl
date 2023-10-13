@@ -11,8 +11,8 @@ fn computeMain(
   @builtin(local_invocation_id) local_id: vec3<u32>,
 ) {
   //Each invocation will populate the shared workgroup data from the input data
-  local_data[local_id.x] = input_data[local_id.x];
-  local_data[local_id.x] = input_data[local_id.x];
+  wokgroup_data[local_id.x] = input_data[local_id.x];
+  workgroup_data[local_id.x] = input_data[local_id.x];
   
   //Wait for each invocation to finish their data population
   workgroupBarrier();
