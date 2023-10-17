@@ -22,12 +22,14 @@ fn computeMain(
   // Loop Pass 1:   [1, 5, 9, 13, 4, 5, 6, 7]
   // Loop Pass 2:   [6, 22, 9, 13, 4, 5, 6, 7]
   for (var current_size = workgroup_len / 2; current_size >= 1; current_size /= 2) {
-    if (local_id.x < current_size) {
+    var sum: u32 = 0;
+    if (local_id.x < u32(current_size)) {
       // Read current values from workgroup_data
-      var sum = workgroup_data[local_id.x * 2] + workgroup_data[local_id.x * 2 + 1];
-      // Wait until all invocations have finished reading from workgroup_data, and have calculated their respective sums
-      workgroupBarrier();
-      // Write sum to workgroup_data
+      sum = workgroup_data[local_id.x * 2] + workgroup_data[local_id.x * 2 + 1];
+   	}
+    // Wait until all invocations have finished reading from workgroup_data, and have calculated their respective sums
+    workgroupBarrier();
+    if (local_id.x < u32(current_size)) {
       workgroup_data[local_id.x] = sum;
     }
     // Wait for each invocation to finish one iteration of the loop, and to have finished writing to workgroup_data
