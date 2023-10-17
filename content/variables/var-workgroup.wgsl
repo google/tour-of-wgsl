@@ -1,11 +1,11 @@
 // Create zero-initialized workgroup shared data
 const workgroup_len = 8;
-var<workgroup> workgroup_data: array<u32, 8>;
+var<workgroup> workgroup_data: array<u32, workgroup_len>;
 
 @group(0) @binding(0) var<storage, read> input_data: array<u32>;
 @group(0) @binding(1) var<storage, read_write> output_data: u32;
 
-// Our workgroup will execute 8 invocations of the shader
+// Our workgroup will execute workgroup_len invocations of the shader
 @compute @workgroup_size(workgroup_len, 1, 1)
 fn computeMain(
   @builtin(global_invocation_id) global_id: vec3<u32>,
@@ -21,16 +21,16 @@ fn computeMain(
   //  Input Data:  [0, 1, 2, 3, 4, 5, 6, 7]
   // Loop Pass 1:   [1, 5, 9, 13, 4, 5, 6, 7]
   // Loop Pass 2:   [6, 22, 9, 13, 4, 5, 6, 7]
-  for (var current_size = workgroup_len / 2; current_size >= 1; current_size = current_size / 2) {
+  for (var current_size = workgroup_len / 2; current_size >= 1; current_size /= 2) {
     if (local_id.x < current_size) {
       // Read current values from workgroup_data
       var sum = workgroup_data[local_id.x * 2] + workgroup_data[local_id.x * 2 + 1];
-      // Wait till all current values are read
+      // Wait until all invocations have finished reading from workgroup_data, and have calculated their respective sums
       workgroupBarrier();
       // Write sum to workgroup_data
       workgroup_data[local_id.x] = sum;
     }
-    // Wait for each invocation to finish one iteration of the loop
+    // Wait for each invocation to finish one iteration of the loop, and to have finished writing to workgroup_data
     workgroupBarrier();
   }
 
