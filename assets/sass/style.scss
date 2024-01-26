@@ -80,6 +80,10 @@
   --shadow-colour: #e4e2e0;
   --highlight-background-colour: #f0f3f3;
 
+  --has-feature-background-colour: #90dd96;
+  --missing-feature-background-colour: #ffc3c3;
+
+
   --syntax-keyword-colour: #006699;
   --syntax-number-colour: #ff6600;
   --syntax-string-colour: #cc3300;
@@ -367,6 +371,22 @@ footer {
     background-size: 1.5em 1.5em;
     background-repeat: no-repeat;
   }
+}
+
+.note_has_feature {
+  background-color: var(--has-feature-background-colour);
+  padding: 10px;
+  padding-left: 1ex;
+  border-radius: 7px;
+  border-left: 3px solid var(--main-background-colour);
+}
+
+.note_missing_feature {
+  background-color: var(--missing-feature-background-colour);
+  padding: 10px;
+  padding-left: 1ex;
+  border-radius: 7px;
+  border-left: 3px solid var(--main-background-colour);
 }
 
 .ascii {

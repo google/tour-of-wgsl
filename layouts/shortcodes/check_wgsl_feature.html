@@ -1,0 +1,17 @@
+{{- $name := .Get 0 -}}
+
+<p id="has_wgsl_{{$name}}"></p>
+
+<script>
+    try {
+        const p = document.getElementById('has_wgsl_{{$name}}');
+        if (navigator.gpu.wgslLanguageFeatures.has('{{$name}}')) {
+            p.classList.add('note_has_feature');
+            p.innerHTML = 'Your browser <b>supports</b> the WGSL language feature <code>{{$name}}</code>';
+        } else {
+            p.classList.add('note_missing_feature');
+            p.innerHTML = 'Your browser <b>does not support</b> the WGSL language feature <code>{{$name}}</code>';
+        }
+    }
+    catch (ex) { }
+</script>
