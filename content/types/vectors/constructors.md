@@ -68,7 +68,7 @@ The short-hand vector constructors {{< vec "vec(N)(value)" >}} and {{< vec "vec(
 <details class='example'>
 <summary>Example</summary>
 
-   `vec4(1i)` constructs a `vec4<i32>` with `1` replicated in all four elements of the vector.
+   `vec4(1)` constructs a `vec4<i32>` with `1` replicated in all four elements of the vector.
 
    `vec2(1, 2)` constructs a two-element vector of type `abstract-int`, with `.x` and `.y` elements initialized with `1`, `2`, respectively.
 
