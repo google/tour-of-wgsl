@@ -1,6 +1,6 @@
 # Tour of WGSL
 
-This repo contains a simple tour of WGSL static site generator. The
+This repository contains a simple tour of WGSL static site generator. The
 purpose is to provide an introduction to WGSL through examples which can
 be modified and run by the user.
 
