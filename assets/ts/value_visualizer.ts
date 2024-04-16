@@ -353,7 +353,7 @@ fn main() {
       ? await shaderModule.getCompilationInfo()
       : await (shaderModule as any).compilationInfo();
     if (compilationInfo.messages.length !== 0) {
-      this.outputText.innerHTML = '';
+      this.outputText.innerText = '';
       throw new CompilationFailure(
         compilationInfo.messages.map((m) => ({
           line: m.lineNum,
