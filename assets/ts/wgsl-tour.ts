@@ -95,7 +95,7 @@ export class WGSLTour extends HTMLElement {
           return;
         }
         var msg = document.createElement('pre');
-        msg.innerHTML = docs;
+        msg.innerText = docs;
         msg.className = 'wgsl-tooltip';
         let tooltip = this.editor.addLineWidget(cursor.line, msg, {
           coverGutter: false,
