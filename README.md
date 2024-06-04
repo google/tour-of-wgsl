@@ -46,9 +46,10 @@ known issues with types that may cause warnings/errors.
 currently is the canary/unstable version. For Windows & Mac this can
 be downloaded from https://www.google.com/intl/en_ca/chrome/canary/.
 
-**Highly recommended that this exists locally as a separate install
-from your standard/daily driver browser, since it is not as heavily
-tested as stable, so may break for normal usage**
+It's strongly advised to have this installed separately on your local system,
+apart from your primary browser used daily. This version isn't as rigorously
+tested as the stable release, thus there's a possibility it might encounter
+issues during regular use.
 
 Enable WebGPU flags, using either:
  * Set `Unsafe WebGPU` to `enabled` in
