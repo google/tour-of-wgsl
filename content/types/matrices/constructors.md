@@ -18,7 +18,7 @@ Matrices have three kinds of constructors:
 
    `mat3x2f()` constructs a `mat3x2f` with zero-values for each of the elements.
 
-  </details>
+   </details>
 
 1. Column-wise constructor: {{< mat "mat(C)x(R)<f32>(column_0, column_1, ...)" >}}
 
