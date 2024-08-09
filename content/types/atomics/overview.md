@@ -9,7 +9,7 @@ Many invocations collectively do the work of a single shader, with
 overlapping but generally uncoordinated schedules.
 
 Invocations share variables in the `workgroup`, `storage`, and `uniform` address spaces.
-Uniform buffers are read-only, but `storage` buffers with `read_write` access mode, and `workgroup`
+`Uniform` buffers are read-only, but `storage` buffers with `read_write` access mode, and `workgroup`
 variables can both be read and written.
 
 When invocations access shared variables, by default they will *race*:
