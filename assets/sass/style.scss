@@ -113,6 +113,16 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 html,
 body {
   margin: 0;
@@ -125,6 +135,7 @@ body {
 main#container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -405,7 +416,6 @@ blockquote {
 #tour-wrapper {
   position: relative;
   width: var(--tour-width-percent);
-  min-height: 852px;
 }
 
 wgsl-tour {
