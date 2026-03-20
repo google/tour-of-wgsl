@@ -12,4 +12,4 @@ visualizerOptions: '{"fields": [
 ]}'
 ---
 
-Matrices support multiplcation with matrices, vectors and scalars.
+Matrices support multiplication with matrices, vectors and scalars.
